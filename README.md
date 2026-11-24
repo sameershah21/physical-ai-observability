@@ -40,8 +40,8 @@ Download the datasets and run two scripts:
 ```bash
 hf download pilarclark/ball-in-the-hole --repo-type dataset --local-dir ball
 hf download sameer-s1/bread-in-toaster-dataset-v1 --repo-type dataset --include "data/*" --local-dir toaster
-hf download sameer-s1/ball-unseen-demonstration --repo-type dataset --local-dir unseen-demonstration   # see note
-hf download sameer-s1/ball-rollout --repo-type dataset --local-dir rollout                               # see note
+hf download pilarclark/ball-unseen-demonstration --repo-type dataset --local-dir unseen-demonstration
+hf download pilarclark/ball-rollout --repo-type dataset --local-dir rollout
 
 mkdir figures
 uv run --no-project --with matplotlib --with pandas --with pyarrow --with pillow --with numpy \
@@ -52,14 +52,16 @@ uv run --no-project --with numpy --with pandas --with pyarrow --with pillow \
 
 `ffmpeg` must be installed. `make_figures.py` draws every figure in the paper; `more_metrics.py`
 prints the numbers of Tables VI–XI, alongside `results/theta_movement.json` for the parameter
-movement. (Note: the two recording datasets' exact Hugging Face names are filled in when they are
-published; until then use the `ball-recordings` archive attached to the Zenodo record.)
+movement.
 
 ## Re-run the policies (optional; needs LeRobot 0.4.5)
 
-The exact result files are in `results/`, so the numbers can be checked without re-training. To
-reproduce a checkpoint, re-run its configuration from `training/` with the same fork of LeRobot (the
-one solo-cli installed on the day of the first run), the public datasets and seed 1000:
+The six trained checkpoints are on the Hugging Face Hub:
+<https://huggingface.co/pilarclark/physical-ai-observability-policies> (one subfolder per policy).
+
+The exact result files are in `results/`, so the numbers can also be checked without the weights. To
+reproduce a checkpoint from scratch, re-run its configuration from `training/` with the same fork of
+LeRobot (the one solo-cli installed on the day of the first run), the public datasets and seed 1000:
 
 ```bash
 pip install "lerobot @ git+https://github.com/GetSoloTech/solo-bot.git@85ecd003cfd4c4bf1d5360d92c6ef0724ca1fc29"
