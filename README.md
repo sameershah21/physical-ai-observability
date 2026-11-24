@@ -4,9 +4,9 @@ Code and results for the paper **"Toward Observability in Physical AI: Offline D
 Imitation-Learning Policies in Robotics"** (Sameer Shah).
 
 - **Paper (PDF + DOI):** https://doi.org/10.5281/zenodo.24496519
-- **Datasets:** [`pilarclark/ball-in-the-hole`](https://huggingface.co/datasets/pilarclark/ball-in-the-hole),
+- **Datasets:** [`sameer-s1/ball-in-the-hole`](https://huggingface.co/datasets/sameer-s1/ball-in-the-hole),
   [`sameer-s1/bread-in-toaster-dataset-v1`](https://huggingface.co/datasets/sameer-s1/bread-in-toaster-dataset-v1) (Hugging Face)
-- **The failed first-run policy (2 steps):** [`pilarclark/act-ball-in-the-hole`](https://huggingface.co/pilarclark/act-ball-in-the-hole)
+- **The failed first-run policy (2 steps):** [`sameer-s1/act-ball-in-the-hole`](https://huggingface.co/sameer-s1/act-ball-in-the-hole)
 
 The paper turns the terms of the Action Chunking Transformer's training objective into ten offline
 metrics that diagnose an imitation-learning policy from recorded files, without a robot. Every number
@@ -28,7 +28,7 @@ in that section).
 ## Check the main finding first
 
 The saved configuration of the first run says `"steps": 2`:
-<https://huggingface.co/pilarclark/act-ball-in-the-hole/blob/main/train_config.json>
+<https://huggingface.co/sameer-s1/act-ball-in-the-hole/blob/main/train_config.json>
 
 `code/theta_movement.py` rebuilds the starting parameters from the recorded seed (1000) and compares
 them with that policy: no parameter has moved by more than 0.000021.
@@ -38,10 +38,10 @@ them with that policy: no parameter has moved by more than 0.000021.
 Download the datasets and run two scripts:
 
 ```bash
-hf download pilarclark/ball-in-the-hole --repo-type dataset --local-dir ball
+hf download sameer-s1/ball-in-the-hole --repo-type dataset --local-dir ball
 hf download sameer-s1/bread-in-toaster-dataset-v1 --repo-type dataset --include "data/*" --local-dir toaster
-hf download pilarclark/ball-unseen-demonstration --repo-type dataset --local-dir unseen-demonstration
-hf download pilarclark/ball-rollout --repo-type dataset --local-dir rollout
+hf download sameer-s1/ball-unseen-demonstration --repo-type dataset --local-dir unseen-demonstration
+hf download sameer-s1/ball-rollout --repo-type dataset --local-dir rollout
 
 mkdir figures
 uv run --no-project --with matplotlib --with pandas --with pyarrow --with pillow --with numpy \
@@ -57,7 +57,7 @@ movement.
 ## Re-run the policies (optional; needs LeRobot 0.4.5)
 
 The six trained checkpoints are on the Hugging Face Hub:
-<https://huggingface.co/pilarclark/physical-ai-observability-policies> (one subfolder per policy).
+<https://huggingface.co/sameer-s1/physical-ai-observability-policies> (one subfolder per policy).
 
 The exact result files are in `results/`, so the numbers can also be checked without the weights. To
 reproduce a checkpoint from scratch, re-run its configuration from `training/` with the same fork of
@@ -66,7 +66,7 @@ LeRobot (the one solo-cli installed on the day of the first run), the public dat
 ```bash
 pip install "lerobot @ git+https://github.com/GetSoloTech/solo-bot.git@85ecd003cfd4c4bf1d5360d92c6ef0724ca1fc29"
 # the 20,000-step ball policy; full settings are in training/ball.train_config.json
-python -m lerobot.scripts.lerobot_train --dataset.repo_id=pilarclark/ball-in-the-hole \
+python -m lerobot.scripts.lerobot_train --dataset.repo_id=sameer-s1/ball-in-the-hole \
     --policy.type=act --steps=20000 --batch_size=8 --seed=1000 --output_dir=out/ball-020000
 cd code
 python offline_predictions.py ../out/ball-020000/checkpoints/020000/pretrained_model ../ball ../rollout policy_020000.npz
