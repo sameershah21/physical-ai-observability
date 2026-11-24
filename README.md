@@ -3,7 +3,7 @@
 Code and results for the paper **"Toward Observability in Physical AI: Offline Diagnostics for
 Imitation-Learning Policies in Robotics"** (Sameer Shah).
 
-- **Paper (PDF + DOI):** https://doi.org/10.5281/zenodo.24496519
+- **Paper (PDF + DOI):** https://doi.org/10.5281/zenodo.24496518
 - **Datasets:** [`sameer-s1/ball-in-the-hole`](https://huggingface.co/datasets/sameer-s1/ball-in-the-hole),
   [`sameer-s1/bread-in-toaster-dataset-v1`](https://huggingface.co/datasets/sameer-s1/bread-in-toaster-dataset-v1) (Hugging Face)
 - **The failed first-run policy (2 steps):** [`sameer-s1/act-ball-in-the-hole`](https://huggingface.co/sameer-s1/act-ball-in-the-hole)
