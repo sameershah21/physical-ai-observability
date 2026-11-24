@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+# reproduction working dirs (downloaded data / outputs)
+ball/
+toaster/
+unseen-demonstration/
+rollout/
+out/
+figures/

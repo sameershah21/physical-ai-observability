@@ -1,0 +1,282 @@
+{
+ "input_shares": [
+  {
+   "policy": "ball task, 2 steps (the hackathon policy)",
+   "answers_differ_by": 1.9651662111282349,
+   "camera": 1.9636929035186768,
+   "joint_readings": 0.01715644635260105
+  },
+  {
+   "policy": "ball task, 300 steps",
+   "answers_differ_by": 27.76766586303711,
+   "camera": 27.765947341918945,
+   "joint_readings": 0.007056400645524263
+  },
+  {
+   "policy": "ball task, 1,000 steps",
+   "answers_differ_by": 28.225160598754883,
+   "camera": 28.2242431640625,
+   "joint_readings": 0.004582065623253584
+  },
+  {
+   "policy": "ball task, 3,000 steps",
+   "answers_differ_by": 30.287017822265625,
+   "camera": 30.286073684692383,
+   "joint_readings": 0.0040276870131492615
+  },
+  {
+   "policy": "ball task, 5,000 steps",
+   "answers_differ_by": 29.37640953063965,
+   "camera": 29.375469207763672,
+   "joint_readings": 0.004239059053361416
+  },
+  {
+   "policy": "ball task, 10,000 steps",
+   "answers_differ_by": 29.651090621948242,
+   "camera": 29.650617599487305,
+   "joint_readings": 0.003975106868892908
+  },
+  {
+   "policy": "ball task, 20,000 steps",
+   "answers_differ_by": 29.123519897460938,
+   "camera": 29.123144149780273,
+   "joint_readings": 0.004198577720671892
+  },
+  {
+   "policy": "ball task, 20,000 steps with augmentation",
+   "answers_differ_by": 29.108491897583008,
+   "camera": 29.106834411621094,
+   "joint_readings": 0.0057947710156440735
+  },
+  {
+   "policy": "toaster task, 2 demonstrations",
+   "answers_differ_by": 21.804616928100586,
+   "front_camera_percent": 76.1268310546875,
+   "hand_camera_percent": 23.63772201538086,
+   "joint_readings_percent": 0.23544295132160187,
+   "joint_readings": 0.05492657423019409
+  },
+  {
+   "policy": "toaster task, 8 demonstrations",
+   "answers_differ_by": 21.76692008972168,
+   "front_camera_percent": 60.814208984375,
+   "hand_camera_percent": 39.11629867553711,
+   "joint_readings_percent": 0.06948848813772202,
+   "joint_readings": 0.01640269346535206
+  },
+  {
+   "policy": "toaster task, 29 demonstrations",
+   "answers_differ_by": 22.60282325744629,
+   "front_camera_percent": 52.714637756347656,
+   "hand_camera_percent": 47.21453857421875,
+   "joint_readings_percent": 0.07082157582044601,
+   "joint_readings": 0.017761778086423874
+  },
+  {
+   "policy": "toaster task, 58 demonstrations",
+   "answers_differ_by": 27.43174934387207,
+   "front_camera_percent": 58.823612213134766,
+   "hand_camera_percent": 38.89689636230469,
+   "joint_readings_percent": 2.279489278793335,
+   "joint_readings": 0.7236236929893494
+  }
+ ],
+ "coverage_toaster": [
+  {
+   "demonstrations": 2,
+   "coverage": 13.93563461303711,
+   "error_on_unseen": 19.113603591918945,
+   "holding_still": 16.471967697143555,
+   "prediction_to_closest_stretch": 4.223793983459473,
+   "closer_to_a_stretch_than_to_the_truth": 90,
+   "frames": 90
+  },
+  {
+   "demonstrations": 8,
+   "coverage": 13.992873191833496,
+   "error_on_unseen": 18.64101791381836,
+   "holding_still": 16.335865020751953,
+   "prediction_to_closest_stretch": 4.129347324371338,
+   "closer_to_a_stretch_than_to_the_truth": 88,
+   "frames": 89
+  },
+  {
+   "demonstrations": 29,
+   "coverage": 11.330473899841309,
+   "error_on_unseen": 14.770588874816895,
+   "holding_still": 16.64501190185547,
+   "prediction_to_closest_stretch": 3.5372352600097656,
+   "closer_to_a_stretch_than_to_the_truth": 90,
+   "frames": 90
+  },
+  {
+   "demonstrations": 58,
+   "coverage": 4.1086225509643555,
+   "error_on_unseen": 7.026248455047607,
+   "holding_still": 16.675004959106445,
+   "prediction_to_closest_stretch": 2.7224106788635254,
+   "closer_to_a_stretch_than_to_the_truth": 90,
+   "frames": 90
+  }
+ ],
+ "coverage_ball": {
+  "coverage": 32.90182113647461,
+  "error_on_unseen": 45.83984375
+ },
+ "inside_a_chunk": [
+  {
+   "demonstrations": 2,
+   "first_action_from_the_arm": 16.61528205871582,
+   "demonstrators_first_action_from_the_arm": 2.2893824577331543,
+   "beats_holding_still_from_step": 54,
+   "error_at_step_1": 16.983966827392578,
+   "holding_still_at_step_1": 2.2893831729888916,
+   "error_at_step_100": 25.347726821899414,
+   "holding_still_at_step_100": 33.348628997802734
+  },
+  {
+   "demonstrations": 8,
+   "first_action_from_the_arm": 16.966785430908203,
+   "demonstrators_first_action_from_the_arm": 2.282914161682129,
+   "beats_holding_still_from_step": 56,
+   "error_at_step_1": 17.021495819091797,
+   "holding_still_at_step_1": 2.2829136848449707,
+   "error_at_step_100": 22.067106246948242,
+   "holding_still_at_step_100": 33.33281707763672
+  },
+  {
+   "demonstrations": 29,
+   "first_action_from_the_arm": 11.807459831237793,
+   "demonstrators_first_action_from_the_arm": 2.2422590255737305,
+   "beats_holding_still_from_step": 46,
+   "error_at_step_1": 12.141919136047363,
+   "holding_still_at_step_1": 2.2422592639923096,
+   "error_at_step_100": 16.46229362487793,
+   "holding_still_at_step_100": 32.623966217041016
+  },
+  {
+   "demonstrations": 58,
+   "first_action_from_the_arm": 5.245606422424316,
+   "demonstrators_first_action_from_the_arm": 2.3499820232391357,
+   "beats_holding_still_from_step": 10,
+   "error_at_step_1": 4.359546661376953,
+   "holding_still_at_step_1": 2.349982261657715,
+   "error_at_step_100": 7.9625630378723145,
+   "holding_still_at_step_100": 33.14744186401367
+  }
+ ],
+ "first_action_ball": {
+  "own_data": 4.713978290557861,
+  "own_data_demonstrator": 3.494194507598877,
+  "unseen": 51.153343200683594,
+  "rollout_frames": 59.34726333618164
+ },
+ "picture_distance": {
+  "unit": 1.4116753339767456,
+  "training_frames_25th_75th": [
+   0.8190917372703552,
+   1.3753294944763184
+  ],
+  "training_frames_largest": 2.0239553451538086,
+  "brightened_1.25": 0.4787801206111908,
+  "brightened_2": 1.3619505167007446,
+  "unseen_demonstration": 1.59047532081604,
+  "unseen_demonstration_range": [
+   1.2901947498321533,
+   2.1725411415100098
+  ],
+  "rollout_without_sun": 1.2192713022232056,
+  "rollout_without_sun_range": [
+   1.035099983215332,
+   3.256338119506836
+  ],
+  "rollout_without_sun_frames": 30,
+  "rollout_with_sun": 2.40582537651062,
+  "rollout_with_sun_range": [
+   1.3620429039001465,
+   3.002852201461792
+  ],
+  "rollout_with_sun_frames": 26,
+  "rollout_with_sun_beyond_training": 24
+ },
+ "visual_importance_ratio": [
+  {
+   "policy": "ball task, 2 steps",
+   "zeros": {
+    "E_img": 194.0213717570347,
+    "E_prop": 0.6360126596636477,
+    "R_img_percent": 99.67326558786033
+   },
+   "training_mean": {
+    "E_img": 273.85830783000034,
+    "E_prop": 0.5393399844127419,
+    "R_img_percent": 99.80344584229981
+   }
+  },
+  {
+   "policy": "ball task, 20,000 steps",
+   "zeros": {
+    "E_img": 1521.3969434890073,
+    "E_prop": 0.27001168198092323,
+    "R_img_percent": 99.98225553350795
+   },
+   "training_mean": {
+    "E_img": 1201.8259244935703,
+    "E_prop": 0.19106127849194857,
+    "R_img_percent": 99.9841049434614
+   }
+  },
+  {
+   "policy": "toaster task, 2 demonstrations",
+   "zeros": {
+    "E_img": 605.4257561577691,
+    "E_prop": 601.4481448703342,
+    "R_img_percent": 50.16478984602465
+   },
+   "training_mean": {
+    "E_img": 645.8319671630859,
+    "E_prop": 1.8997742897106542,
+    "R_img_percent": 99.70670353649078
+   }
+  },
+  {
+   "policy": "toaster task, 8 demonstrations",
+   "zeros": {
+    "E_img": 610.0240281846789,
+    "E_prop": 581.1048290676541,
+    "R_img_percent": 51.213940831838734
+   },
+   "training_mean": {
+    "E_img": 689.5075941297744,
+    "E_prop": 0.7871644991967414,
+    "R_img_percent": 99.88596690176831
+   }
+  },
+  {
+   "policy": "toaster task, 29 demonstrations",
+   "zeros": {
+    "E_img": 774.9219401041667,
+    "E_prop": 636.3918243408203,
+    "R_img_percent": 54.90784258087097
+   },
+   "training_mean": {
+    "E_img": 710.7271942138672,
+    "E_prop": 0.8309360946218173,
+    "R_img_percent": 99.88322301998568
+   }
+  },
+  {
+   "policy": "toaster task, 58 demonstrations",
+   "zeros": {
+    "E_img": 927.7041147867839,
+    "E_prop": 830.8096625434027,
+    "R_img_percent": 52.75500975572205
+   },
+   "training_mean": {
+    "E_img": 949.9871027204725,
+    "E_prop": 24.630223152372572,
+    "R_img_percent": 97.47283138730485
+   }
+  }
+ ]
+}

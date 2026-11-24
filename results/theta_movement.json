@@ -1,0 +1,86 @@
+{
+ "seed": 1000,
+ "values": 51668614,
+ "trainable_values": 51597190,
+ "mean_size_of_a_value": 0.020471265688536206,
+ "learning_rate": 1e-05,
+ "another_seed": {
+  "seed": 1001,
+  "mean_difference": 0.022839217635379275,
+  "share_identical": 0.21721872838423953
+ },
+ "checkpoints": [
+  {
+   "steps": 2,
+   "mean_change": 1.480566292105916e-05,
+   "median_change": 1.7870217561721802e-05,
+   "largest_change": 2.092123031616211e-05,
+   "share_changed": 0.9763410565575373,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 300,
+   "mean_change": 0.0001651576720108964,
+   "median_change": 0.00012407638132572174,
+   "largest_change": 0.0020703477784991264,
+   "share_changed": 0.9954571750903489,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 1000,
+   "mean_change": 0.0002802095795094488,
+   "median_change": 0.00020177941769361496,
+   "largest_change": 0.008211422711610794,
+   "share_changed": 0.9955395439170234,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 2000,
+   "mean_change": 0.0004040710077081198,
+   "median_change": 0.00028301216661930084,
+   "largest_change": 0.014897884801030159,
+   "share_changed": 0.9955615218580702,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 3000,
+   "mean_change": 0.0005316946663612188,
+   "median_change": 0.0003713066689670086,
+   "largest_change": 0.02054679300636053,
+   "share_changed": 0.9956108850113737,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 5000,
+   "mean_change": 0.0007260476775390152,
+   "median_change": 0.0005112197250127792,
+   "largest_change": 0.03541278839111328,
+   "share_changed": 0.9956316613365961,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 10000,
+   "mean_change": 0.001018432971590514,
+   "median_change": 0.0007283100858330727,
+   "largest_change": 0.06163978576660156,
+   "share_changed": 0.9956512554268944,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 15000,
+   "mean_change": 0.001208549556097249,
+   "median_change": 0.0008699483587406576,
+   "largest_change": 0.08314967155456543,
+   "share_changed": 0.9956513523313963,
+   "largest_change_in_frozen_values": 0.0
+  },
+  {
+   "steps": 20000,
+   "mean_change": 0.0013563305743653138,
+   "median_change": 0.0009785965085029602,
+   "largest_change": 0.09710633754730225,
+   "share_changed": 0.9956518562348066,
+   "largest_change_in_frozen_values": 0.0
+  }
+ ]
+}
