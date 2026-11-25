@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toward Observability in Physical AI: Offline Diagnostics for Imitation-Learning Policies in Robotics</title>
+<meta name="description" content="Preprint by Sameer Shah. Ten offline metrics, derived from the Action Chunking Transformer's training objective, that diagnose an imitation-learning policy from its recorded files.">
+<link rel="canonical" href="https://sameershah21.github.io/physical-ai-observability/">
+
+<!-- Read by Google Scholar. The PDF has to sit in the same directory as this page. -->
+<meta name="citation_title" content="Toward Observability in Physical AI: Offline Diagnostics for Imitation-Learning Policies in Robotics">
+<meta name="citation_author" content="Shah, Sameer">
+<meta name="citation_publication_date" content="2026/11/24">
+<meta name="citation_online_date" content="2026/11/24">
+<meta name="citation_doi" content="10.5281/zenodo.24496518">
+<meta name="citation_language" content="en">
+<meta name="citation_keywords" content="imitation learning; behavioural cloning; action chunking; ACT; observability; offline evaluation; Shapley values; covariate shift; LeRobot; robot learning">
+<meta name="citation_abstract_html_url" content="https://sameershah21.github.io/physical-ai-observability/">
+<meta name="citation_pdf_url" content="https://sameershah21.github.io/physical-ai-observability/Toward-Observability-in-Physical-AI.pdf">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Toward Observability in Physical AI">
+<meta property="og:description" content="Offline Diagnostics for Imitation-Learning Policies in Robotics. Preprint by Sameer Shah.">
+<meta property="og:url" content="https://sameershah21.github.io/physical-ai-observability/">
+<meta property="og:image" content="https://sameershah21.github.io/physical-ai-observability/order-of-questions.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Toward Observability in Physical AI: Offline Diagnostics for Imitation-Learning Policies in Robotics",
+  "author": {"@type": "Person", "name": "Sameer Shah", "sameAs": "https://orcid.org/0009-0001-9355-6598"},
+  "datePublished": "2026-11-24",
+  "inLanguage": "en",
+  "url": "https://sameershah21.github.io/physical-ai-observability/",
+  "sameAs": "https://doi.org/10.5281/zenodo.24496518",
+  "identifier": {"@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.24496518"},
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "encoding": {"@type": "MediaObject", "encodingFormat": "application/pdf", "contentUrl": "https://sameershah21.github.io/physical-ai-observability/Toward-Observability-in-Physical-AI.pdf"}
+}
+</script>
+
+<style>
+  :root {
+    --ink: #17242f;
+    --soft: #4b5b6a;
+    --paper: #ffffff;
+    --line: #d3dce4;
+    --blue: #1f5fa8;
+    --on-blue: #ffffff;
+    --wash: #e4eefa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e5ecf3;
+      --soft: #a8b7c6;
+      --paper: #15212d;
+      --line: #2f4051;
+      --blue: #86b8f0;
+      --on-blue: #10202f;
+      --wash: #1d3148;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 1.0625rem/1.56 Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  }
+  .page { max-width: 62rem; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3.25rem) clamp(16px, 4vw, 2.5rem) 4rem; }
+  h1 { margin: 0; font-size: clamp(1.6rem, 1.15rem + 1.9vw, 2.45rem); line-height: 1.16; font-weight: 700; letter-spacing: -0.012em; text-wrap: balance; }
+  .keep { white-space: nowrap; }
+  .byline { margin: 0.9rem 0 0; }
+  .byline strong { font-weight: 700; }
+  .byline span { display: block; color: var(--soft); }
+  a { color: var(--blue); text-underline-offset: 0.18em; text-decoration-thickness: 0.06em; }
+  a:hover { text-decoration-thickness: 0.12em; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+  h2 { margin: 0 0 0.5rem; font-size: 1.2rem; line-height: 1.3; }
+
+  .lead { display: grid; gap: 1.75rem; margin-top: 1.9rem; }
+  .abstract p { margin: 0; max-width: 41rem; }
+  .get { border-top: 4px solid var(--blue); background: var(--wash); padding: 1.1rem 1.2rem 1.15rem; align-self: start; }
+  .get .pdf { display: block; background: var(--blue); color: var(--on-blue); padding: 0.65rem 0.9rem; text-decoration: none; font-weight: 700; }
+  .get .pdf:hover { text-decoration: underline; }
+  .get .pdf span { display: block; font-weight: 400; font-size: 0.92rem; }
+  .get ul { list-style: none; margin: 0.95rem 0 0; padding: 0; display: grid; gap: 0.6rem; line-height: 1.35; }
+  .get li span { display: block; color: var(--soft); font-size: 0.92rem; overflow-wrap: anywhere; }
+
+  figure { margin: 2.75rem 0 0; }
+  figure img { display: block; width: 100%; max-width: 48rem; height: auto; background: #ffffff; padding: 0.5rem; }
+  figcaption { max-width: 41rem; margin-top: 0.75rem; color: var(--soft); font-size: 0.97rem; line-height: 1.5; }
+
+  .notes { display: grid; gap: 2rem; margin-top: 2.75rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .notes p { margin: 0; max-width: 41rem; }
+  pre { margin: 0.9rem 0 0; max-width: 48rem; padding: 0.9rem 1rem; background: var(--wash); overflow-x: auto; font: 0.85rem/1.5 ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+
+  @media (min-width: 54rem) {
+    .lead { grid-template-columns: minmax(0, 1fr) 17.5rem; gap: 2.75rem; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <article>
+    <header>
+      <h1>Toward Observability in <span class="keep">Physical AI:</span> Offline Diagnostics for <span class="keep">Imitation-Learning</span> Policies in Robotics</h1>
+      <p class="byline"><strong>Sameer Shah</strong><span>Preprint, 24 November 2026</span></p>
+    </header>
+
+    <div class="lead">
+      <section class="abstract" aria-labelledby="abstract">
+        <h2 id="abstract">Abstract</h2>
+        <p>Imitation learning failing on a robot can have multiple causes, and it is hard to figure out the root cause just by looking at the failure. From the Action Chunking Transformer's training objective — an L1 reconstruction term and a KL term on its style variable — we derive ten offline metrics, each read against a reference value and applied in a fixed diagnostic order. On two datasets from a low-cost arm they expose a policy trained for 2 steps instead of 20,000; policies whose output is driven 98 to 100% by the camera inputs and almost none by the joint-state inputs; and a demonstration-only coverage metric, computed before training, that moves with the post-training error.</p>
+      </section>
+
+      <section class="get" aria-label="Get the paper">
+        <a class="pdf" href="Toward-Observability-in-Physical-AI.pdf">Read the paper<span>PDF, 14 pages</span></a>
+        <ul>
+          <li><a href="https://doi.org/10.5281/zenodo.24496518">Archived copy on Zenodo</a><span>doi:10.5281/zenodo.24496518</span></li>
+          <li><a href="https://github.com/sameershah21/physical-ai-observability">Code and result files</a><span>GitHub</span></li>
+          <li><a href="https://huggingface.co/sameer-s1">Data and trained policies</a><span>Hugging Face</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <figure>
+      <img src="order-of-questions.png" width="1568" height="1250" alt="Four checks run in order. Was it trained? Does it fit its data? Does it carry over to a demonstration it never saw? What does it depend on? Each lists what was found and what to do if it fails.">
+      <figcaption>Figure 1 of the paper. The terms of the imitation-learning objective become checks that are run in a fixed order on recorded files. Each check has a reference to read it against, and a check that fails says what to do before the later ones are worth running.</figcaption>
+    </figure>
+
+    <div class="notes">
+      <section aria-labelledby="cite">
+        <h2 id="cite">How to cite</h2>
+        <p>Shah, S. (2026). Toward Observability in Physical AI: Offline Diagnostics for Imitation-Learning Policies in Robotics. Preprint, Zenodo. <a href="https://doi.org/10.5281/zenodo.24496518">https://doi.org/10.5281/zenodo.24496518</a></p>
+<pre tabindex="0">@misc{shah2026observability,
+  author    = {Shah, Sameer},
+  title     = {Toward Observability in Physical {AI}: Offline Diagnostics for
+               Imitation-Learning Policies in Robotics},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24496518},
+  url       = {https://doi.org/10.5281/zenodo.24496518}
+}</pre>
+      </section>
+      <section aria-labelledby="made">
+        <h2 id="made">Use of AI tools</h2>
+        <p>The analysis code, including the code that draws the figures, was written with an AI assistant (Claude), which also helped draft and edit the text; every number comes from the recorded files.</p>
+      </section>
+      <section aria-labelledby="licence">
+        <h2 id="licence">Licence</h2>
+        <p>The paper is under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, the code under the MIT License. Author's <a href="https://orcid.org/0009-0001-9355-6598">ORCID record</a>.</p>
+      </section>
+    </div>
+  </article>
+</main>
+</body>
+</html>

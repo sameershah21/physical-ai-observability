@@ -3,7 +3,8 @@
 Code and results for the paper **"Toward Observability in Physical AI: Offline Diagnostics for
 Imitation-Learning Policies in Robotics"** (Sameer Shah).
 
-- **Paper (PDF + DOI):** https://doi.org/10.5281/zenodo.24496518
+- **Paper page and PDF:** https://sameershah21.github.io/physical-ai-observability/
+- **Archived copy (DOI):** https://doi.org/10.5281/zenodo.24496518
 - **Datasets:** [`sameer-s1/ball-in-the-hole`](https://huggingface.co/datasets/sameer-s1/ball-in-the-hole),
   [`sameer-s1/bread-in-toaster-dataset-v1`](https://huggingface.co/datasets/sameer-s1/bread-in-toaster-dataset-v1) (Hugging Face)
 - **The failed first-run policy (2 steps):** [`sameer-s1/act-ball-in-the-hole`](https://huggingface.co/sameer-s1/act-ball-in-the-hole)
@@ -19,6 +20,7 @@ and figure can be reproduced from this repository plus the public datasets above
 | `code/` | The ten analysis scripts. Each file's first lines say what it computes and its arguments. |
 | `results/` | The `.npz` and `.json` files every test produced — the exact results analysed in the paper. |
 | `training/` | The saved training configurations (`*.train_config.json`) and the loss every 200 steps (`*.loss.csv`). |
+| `docs/` | The paper's web page and the PDF. |
 
 The trained model weights are not stored here (they are large and reproducible). See
 **Re-run the policies** below. The two recordings used for figures — the ball-task demonstration no
